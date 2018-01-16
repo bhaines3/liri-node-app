@@ -57,7 +57,7 @@ switch (userRequest) {
     //do this stuff
     getSpotify()
     break;
-  case "spotify-this-song":
+  case "do-what-it-says":
     //do this stuff
     getSpotify()
     break;
