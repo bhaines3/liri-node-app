@@ -8,9 +8,6 @@ var fs = require('fs');
 var client = new Twitter(dataKeys.twitterKeys);
 var spotify = new Spotify(dataKeys.spotifyKeys);
 
-// console.log(client)
-
-
 // my - tweets
 
 // spotify - this - song
@@ -43,12 +40,7 @@ for (var i = 3; i < process.argv.length; i++) {
   }
 }
 console.log(userInput);
-// if(userRequest === "my-tweets"){
-//   //do this stuff
-// }else if(){
-
-// }
-
+//Got help from my tutor using arguments to get "do-what-it-says" to work
 function commands(fileCommand, fileSearch){
   // console.log(arguments)
   // console.log(arguments['0'], arguments['1'])
@@ -136,13 +128,6 @@ function getSpotify(fileSearch) {
         return console.log('Error occurred: ' + err);
       }
       var songs = data.tracks.items;
-      // console.log(songs)
-      // console.log("=====================================")
-      // console.log("Arist Name: " + songs.artists[0].name);
-      // console.log("Song: " + songs.name);
-      // console.log("URL: " + songs.external_urls.spotify);
-      // console.log("Album: " + songs.album.name);
-  
   
       for (var i = 0; i < songs.length; i++) { 
         console.log("=====================================")
@@ -151,7 +136,6 @@ function getSpotify(fileSearch) {
         console.log("URL: " + songs[i].external_urls.spotify);
         console.log("Album: " + songs[i].album.name);
           }  
-  
     });
 
   }else{
@@ -160,13 +144,6 @@ function getSpotify(fileSearch) {
         return console.log('Error occurred: ' + err);
       }
       var songs = data.tracks.items;
-      // console.log(songs)
-      // console.log("=====================================")
-      // console.log("Arist Name: " + songs.artists[0].name);
-      // console.log("Song: " + songs.name);
-      // console.log("URL: " + songs.external_urls.spotify);
-      // console.log("Album: " + songs.album.name);
-
 
       for (var i = 0; i < songs.length; i++) {
         console.log("=====================================")
